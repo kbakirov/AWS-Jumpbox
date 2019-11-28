@@ -1,7 +1,7 @@
 # AWS-Jumpbox Install
-### **Aim:**
-> Build an architecture on AWS so that from "Jumpbox" *(aka Bastion host)* we can access to "Final instance" which is located in private subnet and ping "google.com".
+## **Aim:**
+> From "Jumpbox" *(aka Bastion host)* access to "Final instance" which is located in private subnet and ping "google.com".
 
-###Below is the architecture of Jumpbox:
+### Below is the architecture of Jumpbox:
 
 ![Architecture](Architecture_of_Jumpbox.png)
