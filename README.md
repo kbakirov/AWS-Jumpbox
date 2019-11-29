@@ -7,12 +7,14 @@
 ![Architecture](Architecture_of_Jumpbox.png)
 
 ## **Defining objects:**
-|    Objects     | Name         | IPv4 |
+|    Services     | Given name         | IPv4 |
 |      ---       |  ---         |  --- |
-| `VPC`          | GlobalVPC         |   |
-| `InterGateway` |              |   |
-|`Public Subnet` |
-|`Private Subnet`|
-|`Jumpbox`       |
-|`NAT Instance`  |
-|`Final Instance`|
+| `VPC`          | GlobalVPC    | 10.0.0.0/16 |
+| `InterGateway` | IGWGlobal    | Attached to GlobalVPC  |
+|`Public Subnet` | PublicGlobal | 10.0.1.0/24|
+|`Private Subnet`| PrivateGlobal| 10.0.2.0/24|
+|`Jumpbox`       | Jumpbox      | 54.197.7.194 (public)|
+|`NAT Instance`  | NAT Instance | 18.206.89.131 (public)|
+|`Final Instance`| Final Instance| 10.0.2.55 (no public)|
+
+## **Steps to install:**
