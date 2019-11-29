@@ -18,3 +18,4 @@
 |`Final Instance`| Final Instance| 10.0.2.55 (no public)|
 
 ## **Steps to install:**
+> We create a VPC
