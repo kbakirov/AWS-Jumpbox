@@ -18,7 +18,7 @@
 |`Final Instance`| Final Instance| 10.0.2.55 |
 
 ## **Steps to install:**
-### **1 step**
+### **First step**
 > Create a VPC
 
 GlobalVPC with IPv4 10.0.0.0/16
@@ -57,6 +57,7 @@ PrivateGlobal with IPv4 10.0.2.0/24
 >Launch EC2 instance in a Private Subnet:
 
 * **"Final Instance"** with no public IP.
+
   - Security Group: allow Inbound SSH from local
   - Security Group: allow Outbound All traffic
 
