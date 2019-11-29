@@ -61,20 +61,20 @@ PrivateGlobal with IPv4 10.0.2.0/24
   - Security Group: allow Outbound All traffic
 
 ### **Last step**
-> Connection to Final instance and ping "google.com":
+> Copy key.pem to Final instance and ping "google.com":
 
-  - scp -i key.pem key.pem ec2-user@<Jumbox IP>:key.pem
+  - scp -i key.pem key.pem ec2-user@"Jumbox IP":key.pem
 
 > Connect to Jumpbox:
 
-  - ssh -i key.pem ec2-user@<Jumpbox IP>
+  - ssh -i key.pem ec2-user@"Jumpbox IP"
 
-> From Jumpbox connect to Final step:
+> From Jumpbox connect to Final Instance:
 
-  -  ssh -i key.pem ec2-user@<Final Instance IP>
+  -  ssh -i key.pem ec2-user@"Final Instance IP"
 
 > Ping "google.com"
 
-> Great! We have done!
-
 ![Ping](Ping.png)
+
+### **Great! We have done!**
