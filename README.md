@@ -20,18 +20,24 @@
 ## **Steps to install:**
 ### **1 step**
 > Create a VPC
-GlobalVPC with IPv4 10.0.0.0/16
 
-![VPC](VPC.png)
+GlobalVPC with IPv4 10.0.0.0/16
 
 > Attach Internet Gateway
 
+![VPC](VPC.png)
+
+
+
 ### **2 step**
 > Create Public Subnet
+
 PublicGlobal with IPv4 10.0.1.0/24
 
 > Launch 2 EC2 instances in a Public Subnet
+
 >>"Jumpbox" with automatically assigned public IPv4 54.197.7.194
+
 >>To launch "NAT instance" we have to choose "amzn-ami-vpc-nat" in Community AMIs with ID - ami-00a9d4a05375b2763 (picture attached below).
 
 ![NAT](NAT_instance.png)
