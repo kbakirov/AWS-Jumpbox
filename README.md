@@ -30,14 +30,51 @@ GlobalVPC with IPv4 10.0.0.0/16
 
 
 ### **2 step**
-> Create Public Subnet
+> Create a Public Subnet
 
 PublicGlobal with IPv4 10.0.1.0/24
 
 > Launch 2 EC2 instances in a Public Subnet:
 
-* **"Jumpbox"** with automatically assigned public IPv4 54.197.7.194
+* **"Jumpbox"** with automatically assigned public IPv4 54.197.7.194.
+
+  - Security Group: allow Inbound SSH from 0.0.0.0/0
+  - Security Group: allow Outbound All traffic
 
 * **"NAT instance"** - we choose "amzn-ami-vpc-nat" in Community AMIs with ID - ami-00a9d4a05375b2763 (picture attached below).
 
+  - Security Group: allow Inbound ICMP (Ping) from local
+  - Security Group: allow Outbound All traffic
+  - Very important: in Networking / Change Source/Dest Check --> Disable
+
 ![NAT](NAT_instance.png)
+
+### **3 step**
+> Create a Private Subnet
+
+PrivateGlobal with IPv4 10.0.2.0/24
+
+>Launch EC2 instance in a Private Subnet:
+
+* **"Final Instance"** with no public IP.
+  - Security Group: allow Inbound SSH from local
+  - Security Group: allow Outbound All traffic
+
+### **Last step**
+> Connection to Final instance and ping "google.com":
+
+  - scp -i key.pem key.pem ec2-user@<Jumbox IP>:key.pem
+
+> Connect to Jumpbox:
+
+  - ssh -i key.pem ec2-user@<Jumpbox IP>
+
+> From Jumpbox connect to Final step:
+
+  -  ssh -i key.pem ec2-user@<Final Instance IP>
+
+> Ping "google.com"
+
+> Great! We have done!
+
+![Ping](Ping.png)
