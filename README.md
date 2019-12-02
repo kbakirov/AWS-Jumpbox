@@ -1,5 +1,5 @@
 # AWS-Jumpbox Install
-## **Aim:**
+## **Goal of Jumbox Install:**
 > From "Jumpbox" *(aka Bastion host)* access to "Final instance" which is located in private subnet and ping "google.com".
 
 ### Below is the architecture of Jumpbox:
